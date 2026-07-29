@@ -1,0 +1,63 @@
+site_name: 東山天皇勅願寺 浄土宗光明山天徳寺—Amidabutsu.com
+site_url: https://www.amidabutsu.com
+
+# テーマ設定（beautifulなmaterialテーマを適用）
+theme:
+  name: material
+  language: ja
+  favicon: images/favicon.ico
+  icon:
+    logo: material/dharmachakra
+  font:
+    text: Noto Serif JP
+    code: Roboto Mono
+  palette:
+    # ライトモード（お寺に合う落ち着いたブラウン）
+    - scheme: default
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    # ダークモード
+    - scheme: slate
+      primary: brown
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  # 便利な表示・検索機能の有効化
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - navigation.path
+    - navigation.footer
+    - navigation.instant
+    - keyboard
+
+# カスタムCSSの読み込み
+extra_css:
+  - stylesheets/custom.css
+
+# ナビゲーションメニューの構成
+nav:
+  - ホーム: index.md
+  - 能登半島地震について:
+      - 境内への立ち入り制限について: earthquake.md
+      - 避難先・遠方の皆様へ: distant_members.md
+  - 天徳寺について: about.md
+  - 浄土宗について: jodoshu.md
+  - 年中行事日程: schedule.md
+  - 連絡先: contact.md
+  - リンク: links.md
+
+# Markdownの機能拡張（警告ボックス等を有効化）
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true

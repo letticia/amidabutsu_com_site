@@ -1,0 +1,29 @@
+/*
+  天徳寺様Webサイト用 カスタムスタイルシート
+  サイト全体の画像（アイキャッチ画像など）の角を丸く表示します。
+*/
+
+img {
+  /* 角丸の半径を設定 */
+  border-radius: 8px;
+  /* 画像の周囲にわずかなシャドウを加えて高級感を演出 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 記事本文内のリンク（aタグ）のスタイル改善 */
+.md-content a {
+  /* 常に下線を表示し、少し位置を下げて読みやすくする */
+  text-decoration: underline;
+  text-underline-offset: 3px; 
+  text-decoration-thickness: 1px; /* 下線の太さ（細め） */
+  
+  /* 色や下線の変化を滑らかにするアニメーション効果 */
+  transition: color 0.25s ease, text-decoration-thickness 0.25s ease;
+}
+
+/* リンクにマウスを乗せた（ホバー）時のスタイル */
+.md-content a:hover {
+  /* 下線を少し太くし、アクセントカラー（琥珀色）に変更 */
+  text-decoration-thickness: 2px;
+  color: var(--md-accent-color);
+}
